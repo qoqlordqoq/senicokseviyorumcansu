@@ -1,0 +1,24 @@
+<template name="seniseviyorum">
+  {{> loginButtons}}
+  <br><br/>
+  <h1>Resim Ekle</h1>
+  <div class="addCompanyDiv">
+    <form class="add-new-color" enctype="multipart/form-data">
+        <label for="profileImage">Resim Seç</label>
+        <span id="filename"></span>
+        <input type="file" name="profileImage" id="profileImage" class="black profileImage">
+        <br>
+        <button type="submit" value="Upload Photo" id="profile-btn" class="btn btn-sml btn-primary">Rengi Ekle!</button>
+    </form>
+  </div>
+
+  <br>
+  <br>
+  {{#each UserImages}}
+  <div align="center">
+    <img src="{{image}}" align="middle" style="height:600px; width:auto; ">
+  </div>
+  <br>
+  {{/each}}
+
+</template>

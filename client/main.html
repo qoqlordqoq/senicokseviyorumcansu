@@ -1,0 +1,127 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobilya</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta http-equiv="cleartype" content="on">
+  <meta name="MobileOptimized" content="320">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+
+<template name="layout">
+    {{> yield}}
+</template>
+
+<template name="deneme">
+  {{> loginButtons}}
+  <br><br/>
+  <!--<img class="resim" id="resim" src="trans.png" alt="Siyah Beyaz Kanepe" width="608px" height="304px">-->
+  <div id="div" style="z-index: 1; width:608px; height:295px; border-style: solid;">
+  <img src="transNewest.png" style="z-index:2;" width="608px" height="295px"/>
+  </div>
+  <!--<img class="resim" src="kırmızı.png" alt="Siyah Beyaz Kanepe" width="304px" height="152px">-->
+  <br><br/>
+
+  {{#each showColors}}
+    <p>{{colorName}}</p>
+  {{/each}}
+
+
+  {{#each UserImages}}
+  <button class="renk" style="background-image: url({{image}})" id="{{colorCode}}">{{colorName}}</button>
+  {{/each}}
+
+  <!--<img src="{{image}}" style="width:300px; height:500px;">-->
+
+    <!--<button class="renk" ><img src="orjinal.png" align="middle" width="50" height="50"></button>-->
+    <button class="renk" style="background-image: url(orjinal.png)">1</button>
+
+    
+
+    <!--<button type="button" class="renk" width="50" height="50" backgroundImage="orjinal.png">1</button>-->
+    <button type="button" class="renk" width="50" height="50" id="kalpPattern">a</button>
+    <button type="button" class="renk" width="50" height="50" id="kırmızıYüzey">b</button>
+    <button type="button" class="renk" width="50" height="50" id="ovalPattern">c</button>
+    <button type="button" class="renk" width="50" height="50" id="dallar">d</button>
+    <button type="button" class="renk" width="50" height="50" id="siyah-kumas">e</button>
+    <button type="button" class="renk" width="50" height="50" id="turuncu-kumas">f</button>
+    <button type="button" class="renk" width="50" height="50" id="desen">g</button>
+
+
+    <!-- Js for switching file picker span-->
+    <script type="text/javascript">
+      $(function() {
+        $("#profileImage:file").change(function () {
+            var fileName = $(this).val();
+            $("span").text(fileName);
+            $("label").hide();
+        });
+      });
+    </script>
+
+
+</template>
+
+
+<template name="mobilya">
+<img class="resim" id="resim" src="kanepe.png" alt="Siyah Beyaz Kanepe" width="608px" height="304px">
+<!--<img class="resim" src="kırmızı.png" alt="Siyah Beyaz Kanepe" width="304px" height="152px">-->
+<br><br/>
+
+
+<br><br/>
+
+<select class="secim" id="myselect">
+  <option id="yuzey" value="yuzey">-</option>
+  <option id="yuzey" value="yuzey">Yüzey</option>
+  <option id="yanlar" value="yanlar">Yanlar</option>
+</select>
+
+<br><br/>
+<div class="orjinal">
+  <canvas class="renk" id="orjinal" width="50" height="50">orjinal</canvas>
+</div>
+
+<div class="yuzeyRenkler" id="yuzeyRenkler">
+  <canvas class="renk" id="kırmızı" width="50" height="50">kırmızı</canvas>
+  <canvas class="renk" id="mavi" width="50" height="50">mavi</canvas>
+  <canvas class="renk" id="green" width="50" height="50">yesil</canvas>
+  <canvas class="renk" id="yellow" width="50" height="50">sari</canvas>
+</div>
+
+<div class="yanRenkler" id="yanRenkler">
+  <canvas class="renk" id="white" width="50" height="50" background-color="white">white</canvas>
+</div>
+
+
+<script type="text/javascript">
+var c=document.getElementById("kırmızı");
+var ctx=c.getContext("2d");
+ctx.fillStyle="red";
+ctx.fillRect(0,0,50,50);
+var c=document.getElementById("mavi");
+var ctx=c.getContext("2d");
+ctx.fillStyle="blue";
+ctx.fillRect(0,0,50,50);
+var c=document.getElementById("green");
+var ctx=c.getContext("2d");
+ctx.fillStyle="green";
+ctx.fillRect(0,0,50,50);
+var c=document.getElementById("yellow");
+var ctx=c.getContext("2d");
+ctx.fillStyle="yellow";
+ctx.fillRect(0,0,50,50);
+var c=document.getElementById("white");
+var ctx=c.getContext("2d");
+ctx.fillStyle="white";
+ctx.fillRect(0,0,50,50);
+var c=document.getElementById("orjinal");
+var ctx=c.getContext("2d");
+ctx.fillStyle="white";
+ctx.fillRect(0,0,50,50);
+</script>
+
+</template>

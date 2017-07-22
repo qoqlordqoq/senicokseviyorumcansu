@@ -1,0 +1,27 @@
+<template name="addNewColor">
+  <h1>Kumaş Ekle</h1>
+  {{#if currentUser}}
+  <div class="addCompanyDiv">
+    <form class="add-new-color" enctype="multipart/form-data">
+        <br>
+        <label><span class="makeBold">Kumaş İsmi</span></label>
+        <br>
+        <input name="isim" type="text" id="isim"/>
+        <br>
+        <label><span class="makeBold">Kumaş Kodu</span></label>
+        <br>
+        <input name="renkkodu" type="text" id="renkkodu"/>
+        <br>
+        <label for="profileImage">Resim Seç</label>
+        <span id="filename"></span>
+        <input type="file" name="profileImage" id="profileImage" class="black profileImage">
+        <br>
+        <button type="submit" value="Upload Photo" id="profile-btn" class="btn btn-sml btn-primary">Rengi Ekle!</button>
+        
+    </form>
+  </div>
+    {{else}}
+      <p>Resim eklemek için lütfen giriş yapın!</p>
+
+  {{/if}}
+</template>

@@ -1,0 +1,70 @@
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #e6e6e6;
+  margin: 0;
+
+}
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+button.renk{
+  color: transparent;
+  width: 50px;
+  height: 50px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div.addColorDiv {
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #b3b3b3;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+#orjinal{
+background-image: url("orjinal.png");
+}
+#kalpPattern{
+background-image: url("pattern.jpg");
+}
+#kırmızıYüzey{
+    background-image: url("kirmizi-foto.png");
+}
+#siyah-kumas{
+  background-image: url("siyah-kumas.jpg");
+}
+#turuncu-kumas{
+  background-image: url("turuncu-kumas.jpg");
+}
+#ovalPattern{
+  background-image: url("pattern2.jpg");
+}
+#dallar{
+  background-image: url("dallar.jpg");
+}
+#desen{
+  background-image: url("desen.jpg");
+}
+#yuzeyRenkler{
+  display: none;
+}
+#yanRenkler{
+  display: none;
+}
+#orjinal{
+  display: block;
+}
